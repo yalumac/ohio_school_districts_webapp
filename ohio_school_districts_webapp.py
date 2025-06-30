@@ -14,6 +14,7 @@ import dash
 from dash import dcc, html, Input, Output
 import pandas as pd
 import geopandas as gpd
+import os
 
 
 # replace with your desired path
@@ -754,4 +755,7 @@ def update_time_series(
     return fig
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    #app.run(debug=True)
+    port = int(os.environ.get("PORT", 8080))  # Render sets the PORT env var
+    app.run(host="0.0.0.0", port=port, debug=False)
+
