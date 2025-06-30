@@ -23,7 +23,8 @@ import geopandas as gpd
 # print("Working directory is now:", os.getcwd())
 
 
-df = pd.read_stata("/Users/yaluma.1/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Research Projects/Yaluma do-files/yaluma_segregation_shiny_data.dta")
+# df = pd.read_stata("/Users/yaluma.1/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Research Projects/Yaluma do-files/yaluma_segregation_shiny_data.dta")
+df = pd.read_csv("app_data.csv")
 
 # Searching for variables starting with ecot
 #ecot_cols = [c for c in df.columns if c.startswith('ecot')]
@@ -58,8 +59,8 @@ gdf["leaid"] = gdf["leaid"].astype(str)
 
 
 # 4) Write/Save to GeoJSON & CSV
-gdf.to_file("ohio_districts_2018.geojson", driver="GeoJSON")
-gdf.to_csv("gdf_data.csv", index=False)
+# gdf.to_file("ohio_districts_2018.geojson", driver="GeoJSON")
+# gdf.to_csv("gdf_data.csv", index=False)
 # -------------------------
 # APP code starts here
 # -------------------------
@@ -74,10 +75,6 @@ cols = df.columns.tolist()
 # Build new order: put "leaid" first, then "leaid", then all other columns in their original order
 new_order = ["leaid"] + [c for c in cols if c not in ("leaid")]
 df = df[new_order]
-
-df.to_csv("app_data.csv", index=False)
-print(f"Saved {len(df)} rows to app_data.csv")
-# print(df_app.head())
 
 # Ensure leaid is a string so it matches the GeoJSON feature IDs
 # df["year"] = df["year"].astype(int)
