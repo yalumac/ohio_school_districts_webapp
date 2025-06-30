@@ -15,13 +15,12 @@ from dash import dcc, html, Input, Output
 import pandas as pd
 import geopandas as gpd
 
-import os
 
 # replace with your desired path
-os.chdir(r"/Users/yaluma.1/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Py Projects/Diss App")
+# os.chdir(r"/Users/yaluma.1/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Py Projects/Diss App")
 
 # confirm its working
-print("Working directory is now:", os.getcwd())
+# print("Working directory is now:", os.getcwd())
 
 
 df = pd.read_stata("/Users/yaluma.1/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Research Projects/Yaluma do-files/yaluma_segregation_shiny_data.dta")
