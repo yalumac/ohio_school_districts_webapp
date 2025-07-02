@@ -684,6 +684,7 @@ def update_time_series(
         title_font_size=18,
         title_x=0.5,
         xaxis=dict(
+            tickangle=45,
             title_font=dict(size=14),
             tickfont=dict(size=12),
             showgrid=False,
