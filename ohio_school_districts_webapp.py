@@ -295,7 +295,19 @@ app.layout = html.Div(style={"fontFamily": FONT_FAMILY, "maxWidth": "1400px", "m
                                 max=YEARS[-1],
                                 step=1,
                                 value=YEARS[-1],
-                                marks={str(y): str(y) for y in YEARS},
+                                marks={
+                                    str(y): {
+                                        "label": str(y),
+                                        "style": {
+                                            "transform": "rotate(45deg)",
+                                            "transformOrigin": "top right",
+                                            "whiteSpace": "nowrap",
+                                            "display": "inline-block",
+                                            "marginTop": "15px"
+                                            }
+                                        }
+                                    for y in YEARS
+                                    },
                                 tooltip={"placement": "bottom", "always_visible": False},
                             ),
                         ],
@@ -684,6 +696,7 @@ def update_time_series(
         title_font_size=18,
         title_x=0.5,
         xaxis=dict(
+            tickangle=45,
             title_font=dict(size=14),
             tickfont=dict(size=12),
             showgrid=False,
