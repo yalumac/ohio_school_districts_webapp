@@ -68,7 +68,7 @@ gdf["leaid"] = gdf["leaid"].astype(str)
 # Combine fracpaychartdig with chartershare
 # Method 1: using .loc
 mask = df['year'] > 2012
-df.loc[mask, 'fracpaychartbm'] = df.loc[mask, 'chartershare']
+df.loc[mask, "fracpaychartbm"] = df.loc[mask, "chartershare"]
 
 # Change percents into 0-1 scale
 # Drop missing values
