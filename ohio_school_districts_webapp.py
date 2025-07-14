@@ -65,6 +65,10 @@ gdf["leaid"] = gdf["leaid"].astype(str)
 # -------------------------
 # APP code starts here
 # -------------------------
+# Combine fracpaychartdig with chartershare
+# Method 1: using .loc
+mask = df['year'] > 2012
+df.loc[mask, 'fracpaychartbm'] = df.loc[mask, 'chartershare']
 
 # Change percents into 0-1 scale
 # Drop missing values
@@ -532,29 +536,29 @@ def update_map(selected_year, selected_demo, selected_seg, selected_charter, mea
     # Build the hovertemplate string dynamically
     if measure_type == "demo":
         # Show demographics and highlight the active one
-        active_label = label_dict.get(active_col, active_col)
+        #active_label = label_dict.get(active_col, active_col)
         hover_tmpl = (
             "<b>District ID:</b> %{location}<br>"
             "<b>Total Enrollment:</b> %{customdata[1]:,.0f}<br><br>"
             "<b>Black:</b> %{customdata[2]:.1f}%<br>"
             "<b>Hispanic:</b> %{customdata[3]:.1f}%<br>"
             "<b>White:</b> %{customdata[4]:.1f}%<br>"
-            f"<b>{active_label}:</b> %{{color:.1%}}<extra></extra>"
+            #f"<b>{active_label}:</b> %{{color:.1%}}<extra></extra>"
         )
     elif measure_type == "seg":
         # Show all segregation measures and highlight the active one
-        active_label = label_dict.get(active_col, active_col)
+        #active_label = label_dict.get(active_col, active_col)
         hover_tmpl = (
             "<b>District ID:</b> %{location}<br>"
             "<b>Total Enrollment:</b> %{customdata[1]:,.0f}<br><br>"
             "<b>Rel. Exposure:</b> %{customdata[5]:.3f}<br>"
             "<b>Isolation:</b> %{customdata[6]:.3f}<br>"
             "<b>Dissimilarity:</b> %{customdata[7]:.3f}<br>"
-            f"<b>{active_label}:</b> %{{color:.3f}}<extra></extra>"
+            #f"<b>{active_label}:</b> %{{color:.3f}}<extra></extra>"
         )
     else: # charter
         # Show both charter measures and highlight the active one
-        active_label = label_dict.get(active_col, active_col)
+        #active_label = label_dict.get(active_col, active_col)
         hover_tmpl = (
             "<b>District ID:</b> %{location}<br>"
             "<b>Total Enrollment:</b> %{customdata[1]:,.0f}<br><br>"
@@ -562,7 +566,7 @@ def update_map(selected_year, selected_demo, selected_seg, selected_charter, mea
             "<b>Virtual Charter Share:</b> %{customdata[8]:.1f}%<br>"
             # Note: The index [10] correctly points to ecotpct100 in hover_data
             "<b>ECOT Share:</b> %{customdata[10]:.1f}%<br>" 
-            f"<b>{active_label}:</b> %{{color:.1%}}<extra></extra>"
+            #f"<b>{active_label}:</b> %{{color:.1%}}<extra></extra>"
         )
 
     # Thicken district outlines so you can see individual shapes
