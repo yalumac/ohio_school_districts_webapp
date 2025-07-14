@@ -35,7 +35,7 @@ df = pd.read_csv("app_data.csv")
 # Drop unneccesary columns
 # df.iloc[row_indexer, col_indexer]
 # df = df.iloc[:, :100]
-df = df.loc[:, list(df.columns[:100]) + ["fracpaychartdig", "fracpaychartbm", "ecotpct"]]
+df = df.loc[:, list(df.columns[:100]) + ["fracpaychartdig", "fracpaychartbm", "chartershare", "ecotpct"]]
 
 # For testing the interactive maps
 # df_app = df.iloc[:100, :20]
