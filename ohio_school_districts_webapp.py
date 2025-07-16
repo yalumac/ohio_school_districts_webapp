@@ -421,7 +421,7 @@ app.layout = html.Div(style={"fontFamily": FONT_FAMILY, "maxWidth": "1400px", "m
                children=[
                    "© Chris B. Yaluma, Ph.D.",                # first line (copyright)
                    html.Br(),                     # line break
-                   "Data sources: National Center for Education Statistics/ Ohio Department of Education",
+                   "Data Sources: National Center for Education Statistics/ Ohio Department of Education",
                    ],
                style={
                    "fontFamily": FONT_FAMILY,
