@@ -3,10 +3,12 @@
 """
 Created on Tue May 13 16:43:27 2025
 
-@author: yaluma.1
-"""
+-------------------------------------
+ Author: Chris Yaluma, Ph.D
+ Website: https://chrisyaluma.com/
+-------------------------------------
 
-## Yaluma Segregation Data  
+"""
 
 import json
 import plotly.express as px
@@ -23,6 +25,7 @@ import os
 # confirm its working
 # print("Working directory is now:", os.getcwd())
 
+# Yaluma Segregation Data  
 
 # df = pd.read_stata("/Users/yaluma.1/Library/CloudStorage/OneDrive-TheOhioStateUniversity/Research Projects/Yaluma do-files/yaluma_segregation_shiny_data.dta")
 df = pd.read_csv("app_data.csv")
