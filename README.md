@@ -17,15 +17,15 @@ Welcome to the Ohio School Districts Web App! This interactive Dash application 
    - [Installation](#installation)
    - [Running the App](#running-the-app)
 3. [Application Layout & Functionality](#application-layout--functionality)
-   - [Map & Year Slider](#map--year-slider)
+   - [Map & Year Slider](#map-year-slider)
    - [Measure Type Toggle](#measure-type-toggle)
-   - [Demographic & Segregation Dropdowns](#demographic--segregation-dropdowns)
-   - [Time Series & Overlays](#time-series--overlays)
+   - [Measure Dropdowns](#measure-dropdowns)
+   - [Time Series & Overlays](#time-series-overlays)
    - [Responsive Design](#responsive-design)
-4. [Customization & Extension](#customization--extension)
+4. [Customization & Extension](#customization-extension)
    - [Data Inputs](#data-inputs)
    - [Adding New Measures](#adding-new-measures)
-   - [Styling & Layout](#styling--layout)
+   - [Styling & Layout](#styling-layout)
    - [Performance Tuning](#performance-tuning)
 5. [Architecture Overview](#architecture-overview)
 6. [Future Improvements](#future-improvements)
@@ -37,7 +37,7 @@ Welcome to the Ohio School Districts Web App! This interactive Dash application 
 
 - **Interactive Choropleth Map**: Visualize district-level demographic and segregation measures on a static, zoomable Ohio map.
 - **Year Slider**: Slide through years to animate changes over time, with angled tick labels for clarity.
-- **Measure Type Toggle**: Switch between demographic measures (% Black, % Hispanic, % White) and segregation indices (Dissimilarity, Isolation, Exposure).
+- **Measure Type Toggle**: Switch between demographic measures (% Black, % Hispanic, % White), segregation indices (Exposure, Isolation, Dissimilarity), and charter share (Virtual, B&M, ECOT).
 - **Linked Time Series**: Click a district on the map to display its trend over time in the adjacent chart.
 - **Statewide Overlays**: Overlay Ohio-wide average trends for selected measures via intuitive checkboxes.
 - **Responsive Design**: Fluid Bootstrap-powered layout that adapts seamlessly to desktops, tablets, and mobile devices.
@@ -92,7 +92,7 @@ Then open `http://localhost:8050` in your browser (or replace with your host/por
 
 - A set of radio buttons lets you choose **Demographic**,  **Segregation**, or  **Charter Share**. Based on selection, the appropriate dropdown becomes visible.
 
-### Demographic, Segregation, & Charter Share Dropdowns
+### Measure Dropdowns
 
 - **Demographic Measures**: `% Black`, `% Hispanic`, `% White`. Selecting one updates the map coloring and the time-series chart. 
 - **Segregation Measures**: `Dissimilarity Index`, `Isolation Index`, `Exposure Index`. Works identically to demographics. 
