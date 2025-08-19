@@ -5,7 +5,7 @@ output:
 ---
 **Ohio School Districts Web App**
 
-Welcome to the Ohio School Districts Web App! This interactive Dash application allows users to explore demographic, segregation, charter school enrollment trends across Ohio’s school districts over time. Built with Python, Plotly Dash, and GeoPandas, it combines map-based choropleth visualizations with linked time-series charts for an engaging, data-driven experience.
+Welcome to the Ohio School Districts Web App! This interactive Dash application allows users to explore demographic, segregation, and charter school enrollment trends across Ohio’s school districts over time. Built with Python, Plotly Dash, and GeoPandas, it combines map-based choropleth visualizations with linked time-series charts for an engaging, data-driven experience.
 
 ---
 
